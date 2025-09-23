@@ -367,7 +367,9 @@ textarea {
     border-radius: 6px;
     cursor: pointer;
 }
-
+.myskills {
+    grid-column: 1 / span 2;
+}
 @media (min-width: 768px) {
 
     .hamburger,
@@ -413,7 +415,9 @@ textarea {
         gap: 28px;
         padding: 28px 5vw;
     }
-
+    .myskills {
+        grid-column: 1;
+    }
     .contact {
         grid-template-columns: 1fr;
         padding: 28px 5vw;
