@@ -71,7 +71,7 @@ nav ul li a:hover::after {
 }
 
 .hamburger {
-    position: fixed;
+    position: absolute;
     top: 16px;
     left: 18px;
     z-index: 1200;
@@ -252,11 +252,13 @@ nav ul li a:hover::after {
 
 .expertise span {
     color: var(--accent-color);
+    font-size: 23px;
     font-weight: 600;
 }
 
 .language {
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .bar {
