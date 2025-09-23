@@ -73,7 +73,7 @@ nav ul li a:hover::after {
 .hamburger {
     position: fixed;
     top: 16px;
-    right: 18px;
+    left: 18px;
     z-index: 1200;
     width: 44px;
     height: 44px;
