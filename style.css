@@ -20,7 +20,6 @@ body {
 }
 
 body {
-    background: var(--bg);
     background-image: linear-gradient(90deg, #0a1a2f, #0f2747);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
@@ -437,3 +436,4 @@ textarea {
         margin-bottom: 18px;
     }
 }
+
