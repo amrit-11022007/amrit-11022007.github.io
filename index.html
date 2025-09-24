@@ -190,18 +190,20 @@
                 <a href="https://x.com/a__r__yadav"><i class="fa-brands fa-square-x-twitter"></i> a__r__yadav</a>
             </aside>
             <aside class="right">
-                <form>
+                <form id="contact-form" class="form">
                     <span>Send a mail:</span>
-                    <input type="text" required placeholder="Your Name" />
-                    <input type="email" required placeholder="Your Email" />
-                    <textarea required placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send" class="submitbtn" />
+                    <input type="hidden" name="time" class="inputname" value="Mar 10 2025 08:46">
+                    <input type="text" name="name" required placeholder="Your Name" />
+                    <input type="email" name="email" required placeholder="Your Email" />
+                    <textarea name="message" required placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send" id="sendmailbtn" class="submitbtn" />
                 </form>
             </aside>
         </section>
     </main>
 
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 
 </html>
