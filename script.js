@@ -1,13 +1,10 @@
-// ======================
-// Sidebar / Hamburger menu
-// ======================
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const sidebar   = document.getElementById("sidebar");
   const overlay   = document.getElementById("overlay");
   const closeBtn  = sidebar.querySelector(".closebtn");
   const form      = document.getElementById("contact-form");
-
+ 
   function openMenu() {
     sidebar.classList.add("open");
     overlay.classList.add("active");
@@ -32,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   overlay.addEventListener("click", closeMenu);
   closeBtn.addEventListener("click", closeMenu);
+  // submitBtn.addEventListener("click", openPopup);
 
   sidebar.querySelectorAll("a").forEach(link =>
     link.addEventListener("click", () => {
@@ -47,20 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth >= 768) closeMenu();
   });
 
-  // ======================
-  // EmailJS initialisation
-  // ======================
-  // Replace with your real public key from EmailJS dashboard
+  // EMAILJS initialisation. Replace with your real public key from EmailJS dashboard
   emailjs.init({ publicKey: "XygeyG1feR7vFbZCD" });
 
-  // ======================
-  // Contact Form handler
-  // ======================
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
 
     try {
-      // Send the email – update with your actual Service & Template IDs
       await emailjs.sendForm(
         "service_xv2lmn2",    // Service ID
         "template_o8ec4tn",   // Template ID
@@ -68,10 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       alert("Message sent!");
-      form.reset(); // clear all fields only after success
+      form.reset();
     } catch (err) {
       console.error("EmailJS error:", err);
       alert("Sorry, your message could not be sent. Please try again later.");
+      form.reset();
     }
   });
 });
