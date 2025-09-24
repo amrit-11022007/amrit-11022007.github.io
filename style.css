@@ -148,7 +148,7 @@ nav ul li a:hover::after {
 }
 
 .introduction {
-    min-height: 75vh;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -370,6 +370,7 @@ textarea {
 .myskills {
     grid-column: 1 / span 2;
 }
+
 @media (min-width: 768px) {
 
     .hamburger,
@@ -436,4 +437,3 @@ textarea {
         margin-bottom: 18px;
     }
 }
-
