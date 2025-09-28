@@ -1,69 +1,60 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const sidebar   = document.getElementById("sidebar");
-  const overlay   = document.getElementById("overlay");
-  const closeBtn  = sidebar.querySelector(".closebtn");
-  const form      = document.getElementById("contact-form");
- 
-  function openMenu() {
-    sidebar.classList.add("open");
-    overlay.classList.add("active");
-    hamburger.setAttribute("aria-expanded", "true");
-    sidebar.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
+const content = document.getElementById("content");
+const header = document.getElementById("header");
 
-  function closeMenu() {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("active");
-    hamburger.setAttribute("aria-expanded", "false");
-    sidebar.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
+let currentSubject = null;
 
-  hamburger.addEventListener("click", () => {
-    if (window.innerWidth < 768) {
-      sidebar.classList.contains("open") ? closeMenu() : openMenu();
-    }
+function renderSubjects() {
+  header.textContent = "📘 Class Notes";
+  content.className = "container";
+  content.innerHTML = "";
+
+  Object.keys(notesData).forEach(subject => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.textContent = subject;
+    card.onclick = () => renderSubjectLayout(subject);
+    content.appendChild(card);
   });
+}
 
-  overlay.addEventListener("click", closeMenu);
-  closeBtn.addEventListener("click", closeMenu);
-  // submitBtn.addEventListener("click", openPopup);
+function renderSubjectLayout(subject) {
+  currentSubject = subject;
+  header.textContent = subject;
+  content.className = "layout";
+  content.innerHTML = `
+    <div class="sidebar">
+      <h3>${subject} Topics</h3>
+      <ul id="topicList"></ul>
+      <button class="back-btn" onclick="renderSubjects()">⬅ Back</button>
+    </div>
+    <div class="content-area" id="noteArea">
+      <div class="note-page"><p>Select a topic to view notes.</p></div>
+    </div>
+  `;
 
-  sidebar.querySelectorAll("a").forEach(link =>
-    link.addEventListener("click", () => {
-      if (window.innerWidth < 768) closeMenu();
-    })
-  );
+  const topicList = document.getElementById("topicList");
+  const noteArea = document.getElementById("noteArea");
 
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeMenu();
+  Object.keys(notesData[subject]).forEach(topic => {
+    const li = document.createElement("li");
+    li.textContent = topic;
+    li.onclick = () => {
+      document.querySelectorAll(".sidebar li").forEach(el => el.classList.remove("active"));
+      li.classList.add("active");
+      renderNotes(subject, topic, noteArea);
+    };
+    topicList.appendChild(li);
   });
+}
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) closeMenu();
-  });
+function renderNotes(subject, topic, noteArea) {
+  const notes = notesData[subject][topic];
+  noteArea.innerHTML = `
+    <div class="note-page">
+      <h2>${topic}</h2>
+      ${notes.map(note => `<p>${note}</p>`).join("")}
+    </div>
+  `;
+}
 
-  // EMAILJS initialisation. Replace with your real public key from EmailJS dashboard
-  emailjs.init({ publicKey: "XygeyG1feR7vFbZCD" });
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    try {
-      await emailjs.sendForm(
-        "service_xv2lmn2",    // Service ID
-        "template_o8ec4tn",   // Template ID
-        form
-      );
-
-      alert("Message sent!");
-      form.reset();
-    } catch (err) {
-      console.error("EmailJS error:", err);
-      alert("Sorry, your message could not be sent. Please try again later.");
-      form.reset();
-    }
-  });
-});
+renderSubjects();
