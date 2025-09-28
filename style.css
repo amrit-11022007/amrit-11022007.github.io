@@ -1,7 +1,7 @@
 :root {
-  --primary: #2962ff;
+  --primary: #1e293b;
   --background: #fafafa;
-  --accent: #00acc1;
+  --accent: #155dfc;
 }
 
 ::-webkit-scrollbar {
@@ -62,7 +62,7 @@ header {
 }
 
 .card {
-  border: 1px solid #00acc1;
+  border: 1px solid var(--primary);
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
@@ -82,7 +82,6 @@ header {
 .layout {
   display: flex;
   height: calc(100vh - 70px);
-  /* header height */
 }
 
 .sidebar {
@@ -134,7 +133,8 @@ header {
   color: white;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .back-btn {
@@ -144,6 +144,7 @@ header {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
+  margin: 0 20px 0 0;
 }
 code {
   display: block;
