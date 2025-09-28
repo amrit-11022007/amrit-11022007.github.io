@@ -1,22 +1,50 @@
 :root {
-  --primary: #3F51B5;
-  /* Deep Blue */
-  --background: #F0F2F5;
-  /* Light Gray */
-  --accent: #009688;
-  /* Teal */
+  --primary: #2962ff;
+  --background: #fafafa;
+  --accent: #00acc1;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f2f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+code::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+code::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+code::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+code::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+code {
+  scrollbar-width: thin;
+  scrollbar-color: #000 #f5f5f5;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: var(--background);
-  color: #333;
+  background: linear-gradient(90deg, #0a1a2f, #0f2747);
+  color: #212121;
   width: 100vw;
 }
 
 header {
-  background: var(--primary);
+  border-bottom: 1px solid var(--accent);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -34,7 +62,8 @@ header {
 }
 
 .card {
-  background: white;
+  border: 1px solid #00acc1;
+  color: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   padding: 1.2rem;
@@ -42,11 +71,11 @@ header {
   text-align: center;
   font-weight: bold;
   transition: transform 0.2s;
+  height: 40px;
 }
 
 .card:hover {
   transform: scale(1.05);
-  background: var(--accent);
   color: white;
 }
 
@@ -58,7 +87,8 @@ header {
 
 .sidebar {
   width: 250px;
-  background: white;
+  color: white;
+  border: 1px solid var(--accent);
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   overflow-y: auto;
@@ -68,7 +98,7 @@ header {
 }
 
 .sidebar h3 {
-  color: var(--primary);
+  color: var(--accent);
   font-size: 1.2rem;
 }
 
@@ -90,7 +120,7 @@ header {
 
 .sidebar li:hover,
 .sidebar li.active {
-  background: var(--accent);
+  border: 1px solid var(--accent);
   color: white;
 }
 
@@ -101,10 +131,10 @@ header {
 }
 
 .note-page {
-  background: white;
+  color: white;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .back-btn {
@@ -115,11 +145,39 @@ header {
   border-radius: 6px;
   cursor: pointer;
 }
-
+code {
+  display: block;
+  padding: 8px;
+  background: #212121;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre;
+}
 .back-btn:hover {
   background: var(--primary);
 }
 
+.Physics {
+  border-left: 6px solid #3F51B5;
+}
+
+.Math {
+  border-left: 6px solid #388ec3;
+}
+
+.C {
+  border-left: 6px solid #455a64;
+}
+
+.Manufacturing {
+  border-left: 6px solid #ffb300;
+}
+
+.EVS {
+  border-left: 6px solid #4caf50;
+}
+
+/* for comm: #fb8c00 for engg: 8e24aa */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
