@@ -196,5 +196,44 @@ const notesData = {
       "Quadratic formula: x = (-b ± √(b²-4ac))/2a...",
       "Matrices have rows and columns..."
     ]
+  },
+  "Manufacturing Processes": {
+    Manufcturing: [
+      "Bear Grylls is my idol",
+      "Modiji once collabed with Bear Grylls and he spoke in hindi despite knowing that he doesn't understand a thing."
+    ],
+    Casting: [
+      "IDK",
+    ]
+  },
+  EVS: {
+    'Multi Disciplinary Nature of Environment': [
+      "Enviroment studies is that branch of science which deals with the understanding of environment and the biotic and abiotic components of environment and our existence with them.",
+      "It focuses on understanding:",
+      "1. Natural components of environment: air, water, land, soil, minerals, plants, animals, etc.",
+      "2. Human interaction with environment: how human activities impact the environment and how environmental changes affect human life.",
+      "3. Issues and solutions: environmental problems like pollution, deforestation, climate change, and sustainable practices to mitigate these issues.",
+      "4. Awareness and Responsibility: promoting environmental awareness and encouraging responsible behavior towards the environment.",
+      "5. Interdisciplinary Approach: integrating knowledge from various disciplines like biology, chemistry, physics, geography, economics, sociology, and political science to address environmental challenges.",
+      "Overall, environment studies aims to create a holistic understanding of the environment and our role in preserving it for future generations."
+    ],
+    "Objectives of Environmental Studies": [
+        "1. Understanding the Environment: To gain a comprehensive understanding of the natural and human-made components of the environment and their interactions.",
+        "2. Awareness of Environmental Issues: To raise awareness about environmental problems such as pollution, deforestation, climate change, and biodiversity loss.",
+        "3. Sustainable Development: To promote sustainable practices that balance economic growth, social well-being, and environmental protection.",
+        "4. Conservation of Natural Resources: To encourage the responsible use and conservation of natural resources like water, air, soil, minerals, plants, and animals.",
+        "5. Environmental Ethics: To foster a sense of responsibility and ethical behavior towards the environment among individuals and communities.",
+        "6. To develop skills for environmental problem-solving and decision-making.",
+    ],
+    "Ways to instill public awareness": [
+      "1. Education and Outreach: Implementing environmental education programs in schools, colleges, and communities to raise awareness about environmental issues and their impact on daily life.",
+      "2. Media Campaigns: Utilizing various media platforms such as television, radio, social media, and print media to disseminate information about environmental conservation and sustainable practices.",
+      "3. Community Engagement: Organizing community events, workshops, and seminars to involve local communities in environmental initiatives and encourage active participation.",
+      "4. Government Policies and Regulations: Enforcing environmental laws and regulations to promote sustainable practices and penalize activities that harm the environment.",
+      "5. Collaboration with NGOs and Environmental Organizations: Partnering with non-governmental organizations and environmental groups to amplify awareness campaigns and implement conservation projects.",
+      "6. Promoting Eco-friendly Practices: Encouraging individuals and businesses to adopt eco-friendly practices such as recycling, reducing waste, conserving energy, and using sustainable products.",
+      "7. Role Models and Influencers: Engaging celebrities, influencers, and community leaders to advocate for environmental causes and inspire others to take action.",
+      "8. Public Participation in Environmental Decision-making: Involving the public in environmental planning and decision-making processes to ensure their voices are heard and their concerns are addressed."
+    ]
   }
 };
