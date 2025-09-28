@@ -59,6 +59,23 @@ const notesData = {
         "Multi-line comments start with /* and end with */.",
         "<b>Good to know</b>: Before version C99 (released in 1999), you could only use multi-line comments in C."
     ],
+    Interpreter: [
+        "An interpreter is a program that directly executes instructions written in a programming or scripting language without requiring them to be compiled into machine code.",
+        "Unlike a compiler, which translates the entire source code into machine code before execution, an interpreter reads and executes the code line by line or statement by statement.",
+        "Interpreters are commonly used for scripting languages like Python, JavaScript, and Ruby, where rapid development and ease of testing are prioritized over execution speed.",
+        "Advantages of using an interpreter:",
+        "1. Immediate Execution: Code can be executed immediately without the need for a separate compilation step.",
+        "2. Easier Debugging: Errors can be identified and fixed quickly since the code is executed line by line.",
+        "3. Platform Independence: Interpreted languages can run on any platform with the appropriate interpreter installed.",
+        "Disadvantages of using an interpreter:",
+        "1. Slower Execution: Interpreted code generally runs slower than compiled code due to the overhead of interpretation.",
+        "2. Runtime Errors: Errors may only be detected during execution, which can lead to unexpected behavior if not handled properly.",
+        "Overall, interpreters are useful for rapid development, prototyping, and scripting tasks, while compiled languages are often preferred for performance-critical applications.",
+        "Disadvantages of using an interpreter:",
+        "1. Slower Execution: Interpreted code generally runs slower than compiled code due to the overhead of interpretation.",
+        "2. Runtime Errors: Errors may only be detected during execution, which can lead to unexpected behavior if not handled properly.",
+        "Overall, interpreters are useful for rapid development, prototyping, and scripting tasks, while compiled languages are often preferred for performance-critical applications."
+    ],
     Compilation: [
         "A C program must be compiled before it can be executed. Compilation is the process of converting the source code into machine code that the computer's processor can understand.",
         "A compiler is a special program that performs this conversion. It checks the source code for errors and translates it into an executable file.",
