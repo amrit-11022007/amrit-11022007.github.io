@@ -23,7 +23,7 @@ function renderSubjectLayout(subject) {
   content.className = "layout";
   content.innerHTML = `
     <div class="sidebar">
-      <h3>${subject} Topics</h3>
+      <h3>Topics</h3>
       <ul id="topicList"></ul>
       <button class="back-btn" onclick="renderSubjects()">⬅ Back</button>
     </div>
