@@ -59,6 +59,12 @@ const notesData = {
       "Multi-line comments start with /* and end with */.",
       "<b>Good to know</b>: Before version C99 (released in 1999), you could only use multi-line comments in C."
     ],
+    "Library Functions": [
+      "C provides a rich set of built-in functions that can be used to perform various tasks. These functions are grouped into libraries, which can be included in your program using the #include directive.",
+      "Some commonly used libraries in C:",
+      "1. stdio.h: Standard Input and Output functions (e.g., printf, scanf).",
+      "2. stdlib.h: Standard Library functions (e.g., malloc, free, rand).",
+    ],
     Compilation: [
       "A C program must be compiled before it can be executed. Compilation is the process of converting the source code into machine code that the computer's processor can understand.",
       "A compiler is a special program that performs this conversion. It checks the source code for errors and translates it into an executable file.",
@@ -67,12 +73,6 @@ const notesData = {
       "1. Write your C code in a text file with a .c extension (e.g., program.c).",
       "2. Open a terminal and navigate to the directory where your C file is located.",
       "3. Compile the program using the command: gcc program.c -o program",
-    ],
-    "Library Functions": [
-      "C provides a rich set of built-in functions that can be used to perform various tasks. These functions are grouped into libraries, which can be included in your program using the #include directive.",
-      "Some commonly used libraries in C:",
-      "1. stdio.h: Standard Input and Output functions (e.g., printf, scanf).",
-      "2. stdlib.h: Standard Library functions (e.g., malloc, free, rand).",
     ],
     Interpreter: [
       "An interpreter is a program that directly executes instructions written in a programming or scripting language without requiring them to be compiled into machine code.",
