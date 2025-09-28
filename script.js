@@ -4,13 +4,13 @@ const header = document.getElementById("header");
 let currentSubject = null;
 
 function renderSubjects() {
-  header.textContent = "📘 Class Notes";
+  header.textContent = "Class Notes";
   content.className = "container";
   content.innerHTML = "";
 
   Object.keys(notesData).forEach(subject => {
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = `card ${subject}`;
     card.textContent = subject;
     card.onclick = () => renderSubjectLayout(subject);
     content.appendChild(card);
